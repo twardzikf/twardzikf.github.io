@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "name": "about",
+      "title": "About me"
+    },
+    {
+      "name": "skills",
+      "title": "Skills"
+    },
+    {
+      "name": "experience",
+      "title": "Experience"
+    },
+    {
+      "name": "portfolio",
+      "title": "Portfolio"
+    },
+    {
+      "name": "contact",
+      "title": "Contact"
+    }
+  ]
+}

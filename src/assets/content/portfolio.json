@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "title": "Construction Logistics App Ecosystem",
+      "images": [
+        "kamioni.png"
+      ]
+    },
+    {
+      "title": "Room Rental Web Platform",
+      "images": [
+        "safespace.png"
+      ]
+    },
+    {
+      "title": "Audio Copyright Management on Blockchain",
+      "images": [
+        "audio_blockchain.png"
+      ]
+    },
+    {
+      "title": "API Integration Solution for ERP Systems",
+      "images": [
+        "api_integration.png"
+      ]
+    },
+    {
+      "title": "Distributed Video Streaming QoS Monitoring",
+      "images": [
+        "stream_monitoring.png"
+      ]
+    },
+    {
+      "title": "Non-profit Vet Project Website",
+      "images": [
+        "piesbezstrachu.png"
+      ]
+    }
+  ]
+}
