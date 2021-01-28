@@ -5,6 +5,12 @@ const pug = require('pug');
 const sh = require('shelljs');
 const prettier = require('prettier');
 
+const about = require('./../src/assets/content/about.json');
+const portfolio = require('./../src/assets/content/portfolio.json');
+const experience = require('./../src/assets/content/experience.json');
+const skills = require('./../src/assets/content/skills.json');
+const sections = require('./../src/assets/content/sections.json');
+
 module.exports = function renderPug(filePath) {
     const destPath = filePath.replace(/src\/pug\//, 'dist/').replace(/\.pug$/, '.html');
     const srcPath = upath.resolve(upath.dirname(__filename), '../src');
@@ -13,7 +19,12 @@ module.exports = function renderPug(filePath) {
     const html = pug.renderFile(filePath, {
         doctype: 'html',
         filename: filePath,
-        basedir: srcPath
+        basedir: srcPath,
+        about,
+        portfolio,
+        experience,
+        skills,
+        sections
     });
 
     const destPathDirname = upath.dirname(destPath);

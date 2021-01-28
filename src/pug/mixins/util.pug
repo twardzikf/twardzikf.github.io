@@ -1,0 +1,62 @@
+mixin menu()
+  #navbarResponsive.collapse.navbar-collapse
+    ul.navbar-nav.ml-auto
+      each item, index in sections.items
+        li.nav-item.mx-0.mx-lg-3
+          a.nav-link.py-3.px-0.px-lg-2.js-scroll-trigger(href=`#${item.name}`)= item.title
+
+mixin section-about()
+  header.masthead.bg-primary.text-white.text-center
+    .container.d-flex.align-items-center.flex-column
+      img.masthead-avatar.mb-5(src=`assets/img/${about.image}`, alt='')
+      h1.masthead-heading.text-uppercase.mb-0= about.name
+      .divider-custom.divider-light
+        .divider-custom-line
+        .divider-custom-icon
+          i.fas.fa-star
+        .divider-custom-line
+      p.masthead-subheading.font-weight-light.mb-0= about.lead
+      .row.mt-3
+        each item in about.items
+          .col-lg-8.m-auto
+            p.lead= item
+
+mixin section-portfolio()
+  section#portfolio.page-section.portfolio.bg-secondary
+    .container
+      +section-heading(true, 'Portfolio')
+      .row.justify-content-center
+        each item, index in portfolio.items
+          .col-md-6.col-lg-4.mb-5
+            h4.mb-3.text-center.text-white= item.title
+            .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal#{index+1}}')
+              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item-caption-content.text-center.text-white
+                    i.fas.fa-plus.fa-3x
+              //img.img-fluid(src=`assets/img/portfolio/${item.images[0]}`, alt='')
+
+mixin section-experience()
+  section#experience.page-section.bg-info.text-secondary.mb-0
+    .container
+      +section-heading(false, 'Experience')
+      .row
+        each item in experience.items
+          .col-md-8.col-lg-4.m-auto
+            h4.mb-3.text-center= item.title
+
+mixin section-skills()
+  section#skills.page-section.bg-white.text-secondary.mb-0
+    .container
+      +section-heading(false, 'Skills')
+      .row
+        each item in skills.items
+          .col-md-6.col-lg-4.ml-auto
+            h4.mb-3.text-center= item.title  
+
+mixin section-heading(isLight, title)
+  h2.page-section-heading.text-center.text-uppercase(class=isLight ? 'text-white' : 'text-secondary')= title
+  .divider-custom(class=isLight && 'divider-light')
+      .divider-custom-line
+      .divider-custom-icon
+          i.fas.fa-star
+      .divider-custom-line
