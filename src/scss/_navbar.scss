@@ -2,6 +2,7 @@
 #mainNav {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    height: 7rem;
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
     .navbar-brand {
@@ -11,13 +12,15 @@
         margin-top: 1rem;
         li.nav-item {
             a.nav-link {
+                box-sizing: border-box;
                 color: $white;
                 &:hover {
                     color: $primary;
+                    border-bottom: 2px solid $primary;
                 }
                 &:active,
                 &:focus {
-                    color: $white;
+                    color: $primary;
                 }
                 &.active {
                     color: $primary;
@@ -44,12 +47,10 @@
         }
         .navbar-nav > li.nav-item > a.nav-link.active {
             color: $white;
-            background: $primary;
             &:active,
             &:focus,
             &:hover {
-                color: $white;
-                background: $primary;
+                color: $primary;
             }
         }
     }
